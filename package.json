@@ -1,0 +1,19 @@
+{
+  "name": "mymvp",
+  "version": "1.0.0",
+  "description": "simple game and random quotes",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MauriceOkumu/hrsf52-mvp.git"
+  },
+  "author": "maurice",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MauriceOkumu/hrsf52-mvp/issues"
+  },
+  "homepage": "https://github.com/MauriceOkumu/hrsf52-mvp#readme"
+}
