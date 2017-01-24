@@ -57,9 +57,13 @@
 	
 	var _reactDom = __webpack_require__(/*! react-dom */ 32);
 	
-	var _AwesomeComponent = __webpack_require__(/*! ./AwesomeComponent.jsx */ 178);
+	var _LikesComponent = __webpack_require__(/*! ./LikesComponent.jsx */ 179);
 	
-	var _AwesomeComponent2 = _interopRequireDefault(_AwesomeComponent);
+	var _LikesComponent2 = _interopRequireDefault(_LikesComponent);
+	
+	var _GameComponent = __webpack_require__(/*! ./GameComponent.jsx */ 235);
+	
+	var _GameComponent2 = _interopRequireDefault(_GameComponent);
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
@@ -85,11 +89,12 @@
 	        'div',
 	        null,
 	        _react2.default.createElement(
-	          'p',
+	          'h4',
 	          null,
-	          ' Hello React!'
+	          ' Tell us if it was awesome!'
 	        ),
-	        _react2.default.createElement(_AwesomeComponent2.default, null)
+	        _react2.default.createElement(_GameComponent2.default, null),
+	        _react2.default.createElement(_LikesComponent2.default, null)
 	      );
 	    }
 	  }]);
@@ -22065,10 +22070,151 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./../../process/browser.js */ 3)))
 
 /***/ },
-/* 178 */
-/*!*********************************************!*\
-  !*** ./src/client/app/AwesomeComponent.jsx ***!
-  \*********************************************/
+/* 178 */,
+/* 179 */
+/*!*******************************************!*\
+  !*** ./src/client/app/LikesComponent.jsx ***!
+  \*******************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+	
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+	
+	var _react = __webpack_require__(/*! react */ 1);
+	
+	var _react2 = _interopRequireDefault(_react);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+	
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+	
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+	
+	var LikesComponent = function (_React$Component) {
+	  _inherits(LikesComponent, _React$Component);
+	
+	  function LikesComponent(props) {
+	    _classCallCheck(this, LikesComponent);
+	
+	    var _this = _possibleConstructorReturn(this, (LikesComponent.__proto__ || Object.getPrototypeOf(LikesComponent)).call(this, props));
+	
+	    _this.state = { likesCount: 0 };
+	    _this.onLike = _this.onLike.bind(_this);
+	    return _this;
+	  }
+	
+	  _createClass(LikesComponent, [{
+	    key: "onLike",
+	    value: function onLike() {
+	      var newLikesCount = this.state.likesCount + 1;
+	      this.setState({ likesCount: newLikesCount });
+	    }
+	  }, {
+	    key: "render",
+	    value: function render() {
+	      return _react2.default.createElement(
+	        "div",
+	        null,
+	        _react2.default.createElement(
+	          "div",
+	          null,
+	          _react2.default.createElement(
+	            "button",
+	            { type: "button", className: "btn btn-primary", onClick: this.onLike },
+	            _react2.default.createElement(
+	              "span",
+	              null,
+	              "Like the game"
+	            ),
+	            _react2.default.createElement("span", { className: "glyphicon glyphicon-thumbs-up" })
+	          ),
+	          _react2.default.createElement(
+	            "span",
+	            null,
+	            "likes so far....:"
+	          ),
+	          _react2.default.createElement(
+	            "span",
+	            null,
+	            this.state.likesCount
+	          )
+	        )
+	      );
+	    }
+	  }]);
+	
+	  return LikesComponent;
+	}(_react2.default.Component);
+	
+	exports.default = LikesComponent;
+
+/***/ },
+/* 180 */,
+/* 181 */,
+/* 182 */,
+/* 183 */,
+/* 184 */,
+/* 185 */,
+/* 186 */,
+/* 187 */,
+/* 188 */,
+/* 189 */,
+/* 190 */,
+/* 191 */,
+/* 192 */,
+/* 193 */,
+/* 194 */,
+/* 195 */,
+/* 196 */,
+/* 197 */,
+/* 198 */,
+/* 199 */,
+/* 200 */,
+/* 201 */,
+/* 202 */,
+/* 203 */,
+/* 204 */,
+/* 205 */,
+/* 206 */,
+/* 207 */,
+/* 208 */,
+/* 209 */,
+/* 210 */,
+/* 211 */,
+/* 212 */,
+/* 213 */,
+/* 214 */,
+/* 215 */,
+/* 216 */,
+/* 217 */,
+/* 218 */,
+/* 219 */,
+/* 220 */,
+/* 221 */,
+/* 222 */,
+/* 223 */,
+/* 224 */,
+/* 225 */,
+/* 226 */,
+/* 227 */,
+/* 228 */,
+/* 229 */,
+/* 230 */,
+/* 231 */,
+/* 232 */,
+/* 233 */,
+/* 234 */,
+/* 235 */
+/*!******************************************!*\
+  !*** ./src/client/app/GameComponent.jsx ***!
+  \******************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -22091,54 +22237,26 @@
 	
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 	
-	var AwesomeComponent = function (_React$Component) {
-	  _inherits(AwesomeComponent, _React$Component);
+	var GameComponent = function (_React$Component) {
+	  _inherits(GameComponent, _React$Component);
 	
-	  function AwesomeComponent(props) {
-	    _classCallCheck(this, AwesomeComponent);
+	  function GameComponent() {
+	    _classCallCheck(this, GameComponent);
 	
-	    var _this = _possibleConstructorReturn(this, (AwesomeComponent.__proto__ || Object.getPrototypeOf(AwesomeComponent)).call(this, props));
-	
-	    _this.state = { likesCount: 0 };
-	    _this.onLike = _this.onLike.bind(_this);
-	    return _this;
+	    return _possibleConstructorReturn(this, (GameComponent.__proto__ || Object.getPrototypeOf(GameComponent)).apply(this, arguments));
 	  }
 	
-	  _createClass(AwesomeComponent, [{
-	    key: 'onLike',
-	    value: function onLike() {
-	      var newLikesCount = this.state.likesCount + 1;
-	      this.setState({ likesCount: newLikesCount });
-	    }
-	  }, {
+	  _createClass(GameComponent, [{
 	    key: 'render',
 	    value: function render() {
-	      return _react2.default.createElement(
-	        'div',
-	        null,
-	        'Likes : ',
-	        _react2.default.createElement(
-	          'span',
-	          null,
-	          this.state.likesCount
-	        ),
-	        _react2.default.createElement(
-	          'div',
-	          null,
-	          _react2.default.createElement(
-	            'button',
-	            { onClick: this.onLike },
-	            'Like Me'
-	          )
-	        )
-	      );
+	      return _react2.default.createElement('div', null);
 	    }
 	  }]);
 	
-	  return AwesomeComponent;
+	  return GameComponent;
 	}(_react2.default.Component);
 	
-	exports.default = AwesomeComponent;
+	exports.default = GameComponent;
 
 /***/ }
 /******/ ]);

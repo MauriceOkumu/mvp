@@ -1,16 +1,20 @@
 import React from 'react';
 import {render} from 'react-dom';
-import AwesomeComponent from './AwesomeComponent.jsx';
+import LikesComponent from './LikesComponent.jsx';
+import GameComponent from './GameComponent.jsx';
+
+
 
 class App extends React.Component {
   render () {
     return (
         <div>
-        <p> Hello React!</p>
-        <AwesomeComponent />
+        <h4> Tell us if it was awesome!</h4>
+         < GameComponent />
+         < LikesComponent />
       </div>
     )
   }
 }
 
-render(<App/>, document.getElementById('app'));
+render(<App /> , document.getElementById('app'));
