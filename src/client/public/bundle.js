@@ -22217,7 +22217,7 @@
   \******************************************/
 /***/ function(module, exports, __webpack_require__) {
 
-	'use strict';
+	"use strict";
 	
 	Object.defineProperty(exports, "__esModule", {
 	  value: true
@@ -22247,9 +22247,9 @@
 	  }
 	
 	  _createClass(GameComponent, [{
-	    key: 'render',
+	    key: "render",
 	    value: function render() {
-	      return _react2.default.createElement('div', null);
+	      return _react2.default.createElement("div", { className: "container container-fluid" });
 	    }
 	  }]);
 	
