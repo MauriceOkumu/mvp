@@ -57,13 +57,17 @@
 	
 	var _reactDom = __webpack_require__(/*! react-dom */ 32);
 	
-	var _LikesComponent = __webpack_require__(/*! ./LikesComponent.jsx */ 179);
+	var _LikesComponent = __webpack_require__(/*! ./LikesComponent.jsx */ 178);
 	
 	var _LikesComponent2 = _interopRequireDefault(_LikesComponent);
 	
-	var _GameComponent = __webpack_require__(/*! ./GameComponent.jsx */ 235);
+	var _GameComponent = __webpack_require__(/*! ./GameComponent.jsx */ 179);
 	
 	var _GameComponent2 = _interopRequireDefault(_GameComponent);
+	
+	var _RandomQuotesComponent = __webpack_require__(/*! ./RandomQuotesComponent.jsx */ 180);
+	
+	var _RandomQuotesComponent2 = _interopRequireDefault(_RandomQuotesComponent);
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
@@ -76,10 +80,15 @@
 	var App = function (_React$Component) {
 	  _inherits(App, _React$Component);
 	
-	  function App() {
+	  function App(props) {
 	    _classCallCheck(this, App);
 	
-	    return _possibleConstructorReturn(this, (App.__proto__ || Object.getPrototypeOf(App)).apply(this, arguments));
+	    var _this = _possibleConstructorReturn(this, (App.__proto__ || Object.getPrototypeOf(App)).call(this, props));
+	
+	    _this.state = {
+	      quotes: ['amazing stuff from props', 'react is the best framework']
+	    };
+	    return _this;
 	  }
 	
 	  _createClass(App, [{
@@ -94,7 +103,8 @@
 	          ' Tell us if it was awesome!'
 	        ),
 	        _react2.default.createElement(_GameComponent2.default, null),
-	        _react2.default.createElement(_LikesComponent2.default, null)
+	        _react2.default.createElement(_LikesComponent2.default, null),
+	        _react2.default.createElement(_RandomQuotesComponent2.default, { quotes: this.state.quotes })
 	      );
 	    }
 	  }]);
@@ -22070,8 +22080,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./../../process/browser.js */ 3)))
 
 /***/ },
-/* 178 */,
-/* 179 */
+/* 178 */
 /*!*******************************************!*\
   !*** ./src/client/app/LikesComponent.jsx ***!
   \*******************************************/
@@ -22156,62 +22165,7 @@
 	exports.default = LikesComponent;
 
 /***/ },
-/* 180 */,
-/* 181 */,
-/* 182 */,
-/* 183 */,
-/* 184 */,
-/* 185 */,
-/* 186 */,
-/* 187 */,
-/* 188 */,
-/* 189 */,
-/* 190 */,
-/* 191 */,
-/* 192 */,
-/* 193 */,
-/* 194 */,
-/* 195 */,
-/* 196 */,
-/* 197 */,
-/* 198 */,
-/* 199 */,
-/* 200 */,
-/* 201 */,
-/* 202 */,
-/* 203 */,
-/* 204 */,
-/* 205 */,
-/* 206 */,
-/* 207 */,
-/* 208 */,
-/* 209 */,
-/* 210 */,
-/* 211 */,
-/* 212 */,
-/* 213 */,
-/* 214 */,
-/* 215 */,
-/* 216 */,
-/* 217 */,
-/* 218 */,
-/* 219 */,
-/* 220 */,
-/* 221 */,
-/* 222 */,
-/* 223 */,
-/* 224 */,
-/* 225 */,
-/* 226 */,
-/* 227 */,
-/* 228 */,
-/* 229 */,
-/* 230 */,
-/* 231 */,
-/* 232 */,
-/* 233 */,
-/* 234 */,
-/* 235 */
+/* 179 */
 /*!******************************************!*\
   !*** ./src/client/app/GameComponent.jsx ***!
   \******************************************/
@@ -22257,6 +22211,45 @@
 	}(_react2.default.Component);
 	
 	exports.default = GameComponent;
+
+/***/ },
+/* 180 */
+/*!**************************************************!*\
+  !*** ./src/client/app/RandomQuotesComponent.jsx ***!
+  \**************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+	
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	
+	var _react = __webpack_require__(/*! react */ 1);
+	
+	var _react2 = _interopRequireDefault(_react);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	var RandomQuotes = function RandomQuotes(props) {
+	  return _react2.default.createElement(
+	    "div",
+	    { className: "well" },
+	    _react2.default.createElement(
+	      "ul",
+	      null,
+	      props.quotes.map(function (quote, index) {
+	        return _react2.default.createElement(
+	          "li",
+	          { key: index },
+	          quote
+	        );
+	      })
+	    )
+	  );
+	};
+	
+	exports.default = RandomQuotes;
 
 /***/ }
 /******/ ]);
