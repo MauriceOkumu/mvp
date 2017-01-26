@@ -86,7 +86,7 @@
 	    var _this = _possibleConstructorReturn(this, (App.__proto__ || Object.getPrototypeOf(App)).call(this, props));
 	
 	    _this.state = {
-	      quotes: ['amazing stuff from props', 'react is the best framework']
+	      quotes: ['Hello cohort', 'watch the space as...', 'there will be random quotes here soon!!']
 	    };
 	    return _this;
 	  }
@@ -22238,6 +22238,11 @@
 	    _react2.default.createElement(
 	      "ul",
 	      null,
+	      _react2.default.createElement(
+	        "h2",
+	        null,
+	        "Random Quotes"
+	      ),
 	      props.quotes.map(function (quote, index) {
 	        return _react2.default.createElement(
 	          "li",

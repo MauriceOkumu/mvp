@@ -10,7 +10,7 @@ class App extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
-      quotes:['amazing stuff from props','react is the best framework']
+      quotes:['Hello cohort','watch the space as...','there will be random quotes here soon!!']
     }
   }
   render () {
